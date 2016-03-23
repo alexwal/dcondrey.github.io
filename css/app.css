@@ -1,0 +1,81 @@
+html {
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+body {
+  height: 100%;
+  font-family:Arial,sans-serif;
+  color:#fff;
+  margin: 0;
+}
+
+header {
+  background-image: url('../images/desk.jpg');
+  background-size: cover;
+  background-attachment:fixed;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: table;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header.scrolled {
+  opacity: 0.2;
+  transition: all 1s ease;
+}
+
+header > div {
+  display: table-cell;
+  vertical-align: middle;
+  margin: auto 0;
+}
+
+header > div > div h1 {
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-shadow: 0 -1px 0px rgba(90, 153, 242, 0.6), 0 -2px 0px rgba(76, 133, 240, 0.8);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+  padding: 4px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header > div > div a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 700;
+  font-size: 0.975rem;
+  text-shadow: 0 1px 0px rgba(83, 135, 22, 0.3), 0 -2px 0px rgba(76, 133, 240, 0.3);
+
+}
+
+.container {
+  width: 65%;
+  margin: 0 auto;
+  color:#333;
+}
+
+.container div {
+  margin: 40px;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.container > div h1 {
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  margin: 16px auto;
+  padding: 8px 0;
+  text-align: center;
+  text-transform: lowercase;
+}
