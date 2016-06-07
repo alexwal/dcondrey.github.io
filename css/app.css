@@ -20,10 +20,19 @@ body {
   height: auto;
 }
 
-header {
+header:before {
+  content: '\A';
   background-image: url('../images/desk.jpg');
   background-size: cover;
   background-attachment:fixed;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  z-index:-1;
+}
+header {
   text-align: center;
   width: 100%;
   height: 100%;
@@ -31,16 +40,9 @@ header {
   box-sizing: border-box;
 }
 
-header:after {
-  position: absolute;
-  content:'\A';
-  width: 100%;
-  height: 100%;
-  background:rgba(0,0,0,0.1);
-}
 
 header.scrolled {
-  opacity: 0.2;
+  opacity: 0;
   transition: all 1s ease;
 }
 
@@ -75,8 +77,10 @@ header > div > div a {
 
 .container {
   width: 65%;
+  height: 100vh;
   margin: 0 auto;
   color:#333;
+  padding-top: 50px;
 }
 
 .container div {
