@@ -169,6 +169,25 @@ p {
   line-height: 1.5;
 }
 
+.cardView p {
+    position:absolute;
+    pointer-events:none;
+    cursor:default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    top:80px;
+    left:20px;
+    width:460px;
+    text-align: center;
+    color:#FFFFFF;
+    font-size: 18px;
+    font-family:Calibri, Arial, Helvetica, sans-serif;
+}
+
 h1 {
     color: #525559;
     font-weight: 300;
@@ -177,6 +196,25 @@ h1 {
     margin-top: 0;
     margin-bottom: 1.66667em;
 }
+
+.cardView h1 {
+    position:absolute;
+    cursor:default;
+    pointer-events:none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    top:20px;
+    width:500px;
+    text-align: center;
+    color:#FFFFFF;
+    font-size: 50px;
+
+}
+
 h2 {
     color: #999da1;
     margin-bottom: 0.91667em;
@@ -257,23 +295,6 @@ h4 {
     color:inherit;
     text-decoration:none;
 }
-.detailHeader{
-    position:absolute;
-    cursor:default;
-    pointer-events:none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    top:20px;
-    width:500px;
-    text-align: center;
-    color:#FFFFFF;
-    font-size: 50px;
-
-}
 
 .detailDOMTitle{
     position:absolute;
@@ -296,27 +317,7 @@ h4 {
     font-family:Calibri, Arial, Helvetica, sans-serif;
 }
 
-.detailDescription{
-    position:absolute;
-    pointer-events:none;
-    cursor:default;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    top:80px;
-    left:20px;
-    width:460px;
-    text-align: center;
-    color:#FFFFFF;
-    font-size: 18px;
-    //text-shadow: rgba(0,0,0, 0.4) 0em 0em 0.3em;
-    font-family:Calibri, Arial, Helvetica, sans-serif;
-}
-
-.detailName{
+.cardView footer {
     position:absolute;
     cursor:default;
     top:455px;

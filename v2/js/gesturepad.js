@@ -1,4 +1,3 @@
-
 Gesturepad = function(target) {
     console.log('gesturepad', target);
 
@@ -19,32 +18,55 @@ Gesturepad = function(target) {
 Gesturepad.prototype.enable = function() {
     var self = this;
 
-    $(document).mousedown($.proxy(self.onMouseDown, self));
-    $(document).mouseup($.proxy(self.onMouseUp, self));
-    $(document).mousemove($.proxy(self.onMouseMove, self));
-    $(document).bind("touchstart", $.proxy(self.onMouseDown, self));
-    $(document).bind("touchend", $.proxy(self.onMouseUp, self));
-    $(document).bind("touchmove", $.proxy(self.onMouseMove, self));
+    var events = {
+        "mousedown": onMouseDown,
+        "mousemove": onMouseMove,
+        "mouseup": onMouseUp,
+        "touchstart": onMouseDown,
+        "touchend": onMouseUp,
+        "touchmove": onMouseMove
+    };
+
+    Object.keys(events).forEach(function(key,index) {
+        util.DOM.document.bind(key, $.proxy(proxy, self));
+    });
+
+
+    // util.DOM.document.mousedown($.proxy(self.onMouseDown, self));
+    // util.DOM.document.mouseup($.proxy(self.onMouseUp, self));
+    // util.DOM.document.mousemove($.proxy(self.onMouseMove, self));
+    // util.DOM.document.bind("touchstart", $.proxy(self.onMouseDown, self));
+    // util.DOM.document.bind("touchend", $.proxy(self.onMouseUp, self));
+    // util.DOM.document.bind("touchmove", $.proxy(self.onMouseMove, self));
 };
 
 Gesturepad.prototype.disable = function() {
-    console.log('gesturepad:onmouseup');
     var self = this;
 
-    $(document).unbind("mousedown", $.proxy(self.onMouseDown, self));
-    $(document).unbind("mousemove", $.proxy(self.onMouseMove, self));
-    $(document).unbind("mouseup", $.proxy(self.onMouseUp, self));
-    $(document).unbind("touchstart", $.proxy(self.onMouseDown, self));
-    $(document).unbind("touchend", $.proxy(self.onMouseUp, self));
-    $(document).unbind("touchmove", $.proxy(self.onMouseMove, self));
+    var events = {
+        "mousedown": onMouseDown,
+        "mousemove": onMouseMove,
+        "mouseup": onMouseUp,
+        "touchstart": onMouseDown,
+        "touchend": onMouseUp,
+        "touchmove": onMouseMove
+    };
+
+    Object.keys(events).forEach(function(key,index) {
+        var proxy = self.index;
+        util.DOM.document.unbind(key, $.proxy(proxy, self));
+    });
+
+    // util.DOM.document.unbind("mousedown", $.proxy(self.onMouseDown, self));
+    // util.DOM.document.unbind("mousemove", $.proxy(self.onMouseMove, self));
+    // util.DOM.document.unbind("mouseup", $.proxy(self.onMouseUp, self));
+    // util.DOM.document.unbind("touchstart", $.proxy(self.onMouseDown, self));
+    // util.DOM.document.unbind("touchend", $.proxy(self.onMouseUp, self));
+    // util.DOM.document.unbind("touchmove", $.proxy(self.onMouseMove, self));
 };
 
 Gesturepad.prototype.onMouseDown = function(evt) {
-    console.log('gesturepad:onmousedown');
-
-    if (evt) {
-        evt.preventDefault();
-    }
+    util.preventDefault(evt);
 
     var self = this;
 
@@ -57,11 +79,7 @@ Gesturepad.prototype.onMouseDown = function(evt) {
     self.endPoint.y = evt.pageY - rect.top;
 };
 Gesturepad.prototype.onMouseUp = function(evt) {
-    console.log('gesturepad:onmouseup');
-
-    if (evt) {
-        evt.preventDefault();
-    }
+    util.preventDefault(evt);
 
     var self = this;
 
@@ -114,8 +132,6 @@ Gesturepad.prototype.onMouseUp = function(evt) {
 };
 
 Gesturepad.prototype.onMouseMove = function(evt) {
-    console.log('gesturepad:onmousemove');
-
     var self = this;
 
     var rect = self.target.getBoundingClientRect();

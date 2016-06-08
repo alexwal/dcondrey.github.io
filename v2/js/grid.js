@@ -284,8 +284,6 @@ Grid.prototype.down = function() {
 
 /* Drag up */
 Grid.prototype.up = function() {
-    console.log('grid:up');
-
     if (this.overCell.down) {
         this.overCell.down = false;
 
@@ -368,6 +366,7 @@ Grid.prototype.hittest = function() {
 
     var gridPosX = Math.floor((mouse.x - this.camera.x) / this.squareWidth) + 2;
     var gridPosY = Math.floor((mouse.y - this.camera.y + this.squareWidth * 0.5) / this.squareWidth) + 1;
+
     gridPosX %= this.gridWidth;
     if (gridPosX < 0) {
         gridPosX += this.gridWidth;

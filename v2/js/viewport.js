@@ -72,12 +72,14 @@ Viewport.prototype.render = function(context) {
     if (image) {
         var sizeX = averageWidth3 / 300 * image.width;
         var sizeY = averageHeight3 / 300 * image.height;
+
         if (sizeX < 0) {
             sizeX *= -1;
         }
         if (sizeY < 0) {
             sizeY *= -1;
         }
+
         var av1 = averageWidth2 / averageWidth;
         var av1_ = averageWidth / averageWidth2;
         av1 = av1 > av1_ ? av1 : av1_;
@@ -89,6 +91,7 @@ Viewport.prototype.render = function(context) {
     }
     context.restore();
 };
+
 Viewport.prototype.resize = function(width, height) {
     var self = this;
 
@@ -106,6 +109,7 @@ Viewport.prototype.showCard = function(card) {
     self.imageAlpha = 1;
 
     var fbColorSplit = util.hexToRgb(card.color);
+
     fbColorSplit[0] = Math.floor(fbColorSplit[0] * 0.7);
     fbColorSplit[1] = Math.floor(fbColorSplit[1] * 0.7);
     fbColorSplit[2] = Math.floor(fbColorSplit[2] * 0.7);
@@ -176,14 +180,16 @@ Viewport.prototype.hide = function() {
 
 Viewport.prototype.onSquareComplete = function() {
     console.log('onsquarecomplete');
+
     if (util.isIpad) {
-        setTimeout(onSquareReady.bind(this), 400);
+        setTimeout(cardview.show(this), 400);
     } else {
-        onSquareReady();
+        cardview.show(this);
     }
 };
 
 Viewport.prototype.onHidden = function() {
     this.card = null;
+
     onViewportHidden();
 };

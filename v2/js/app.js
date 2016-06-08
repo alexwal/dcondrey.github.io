@@ -2,13 +2,9 @@ $.support.cors = true;
 
 $(window).ready(onReady);
 
-// var soundButton;
-// var SOUNDS = {};
-
 function onReady() {
     IS_IE8 = false; // !Modernizr.canvas
     $("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">');
-    siteTime = new Time;
     last = 0;
     loaded = false;
     resizeCount = 0;
@@ -42,8 +38,15 @@ function init() {
      * Draw the canvas
      */
     canvas = document.createElement("canvas");
-    canvas.width = windowWidth;
-    canvas.height = windowHeight;
+
+    util.setAttributes(canvas, {
+        "aria-hidden": "true",
+        "width": windowWidth,
+        "height": windowHeight,
+        "tabindex": "0",
+        "aria-pressed": "false",
+        "role": "Application"
+    });
 
     context = canvas.getContext("2d");
     canvas.style.position = "absolute";
@@ -56,7 +59,13 @@ function init() {
      * Animate display canvas
      */
     canvas.style.display = "none";
+
     $(canvas).fadeIn("slow");
+
+    util.setAttributes(canvas, {
+        "aria-hidden": "false",
+    });
+
 
     /**
      * Add event listeners to canvas
@@ -71,29 +80,28 @@ function init() {
 
     grid = new Grid(windowWidth, windowHeight);
 
-    console.log('Grid',grid);
-
     grid.onCardSelected = onCardSelected;
     trackpad = new Trackpad(canvas);
-    console.log('Focus', trackpad);
     viewport = new Viewport(windowWidth, windowHeight);
-    console.log('Viewport', viewport);
 
     cardview = new Cardview;
     cardview.onClosePressed = hideCard;
-//    cardview.onSwapPressed = onSwapPressed;
+
     browseMode = false;
     pauseGridRender = false;
     onResize();
     resizeCount = 19;
     trackpad.lock();
+
     var start = model.layout.indexOf(0);
     var layoutWidth = model.dimensions[0];
     var startX = -2;
     var startY = -2;
+
     trackpad.setPosition(windowWidth / 2 + startX * 300 + 300 / 2, windowHeight / 2 + startY * 300);
     grid.onStartComplete = onGridStartComplete;
     grid.startIntro();
+
     requestAnimFrame(update);
 }
 
@@ -101,6 +109,7 @@ function onGridStartComplete() {
     var hashString = window.location.hash;
     var id = hashString.split("=")[1];
     var card;
+
     if (id) {
         for (var i = 0; i < model.content.length; i++) {
             if (id == model.content[i].rfid) {
@@ -109,6 +118,7 @@ function onGridStartComplete() {
             }
         }
     }
+
     if (card) {
         showCard(card);
     } else {
@@ -120,6 +130,7 @@ function onGridStartComplete() {
 
 function update() {
     resizeCount++;
+
     if (resizeCount == 20) {
         var w = $(window).width();
         var h = $(window).height();
@@ -132,19 +143,21 @@ function update() {
         cardview.view.style.left = w / 2 + -300 + "px";
         cardview.view.style.top = h / 2 - 300 + "px";
 
-
         if (w != this.cacheW && h != this.cacheH) {
             window.scrollTo(0, 0);
         }
+
         this.cacheW = w;
         this.cacheH = h;
     }
-    siteTime.update();
+
     if (loaded && browseMode) {
         trackpad.update();
     }
+
     track.x = trackpad.value;
     track.y = trackpad.valueY;
+
     if (!pauseGridRender) {
         if (!IS_IE8) {
             grid.render(context);
@@ -179,13 +192,6 @@ function showCard(card) {
     }
 }
 
-// function onSwapPressed() {
-//     window.location.hash = "";
-//     pauseGridRender = false;
-//     viewport.swap();
-//     // submitForm.show()
-// }
-
 function hideCard() {
     pauseGridRender = false;
     viewport.hide();
@@ -200,12 +206,6 @@ function onViewportShown() {
         grid.render(context);
         viewport.render(context);
     }
-}
-
-function onSquareReady() {
-    console.log('onsquareready');
-
-    cardview.show(card);
 }
 
 function onViewportHidden() {
@@ -225,18 +225,8 @@ function onCardSelected(card) {
     }
 }
 
-function onSubmitComplete() {
-    // submitForm.hide();
-    trackpad.unlock();
-    grid.unlock();
-    browseMode = true;
-}
-
 function onResize() {
     resizeCount = 0;
-    //if (loaderScreen) {
-    //    loaderScreen.resize(window.innerWidth || document.documentElement.clientWidth, window.innerHeight || document.documentElement.clientHeight)
-    //  }
 }
 mouse = {
     x: 0,
@@ -276,12 +266,13 @@ function onTouchStart(event) {
     mouse.y = event.pageY + document.body.scrollTop;
     downTarget.x = mouse.x;
     downTarget.y = mouse.y;
+
     if (!browseMode) {
         return;
     }
+
     if (!grid.firstTouch) {
         grid.firstTouch = true;
-        //SOUNDS.drag.play();
     }
     grid.down();
 }
@@ -312,6 +303,7 @@ function testDidMove() {
     var xdist = mouse.x - downTarget.x;
     var ydist = mouse.y - downTarget.y;
     var dist = xdist * xdist + ydist * ydist;
+
     if (dist > 30 * 30) {
         grid.didMove = true;
     }

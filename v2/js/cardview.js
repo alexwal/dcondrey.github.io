@@ -4,9 +4,23 @@ Cardview = function() {
     this.count = 0;
     this.frame = 0;
     this.view = document.createElement("div");
+
     this.view.style.position = "absolute";
-    this.view.className = "cardView";
+    // this.view.setAttribute("aria-hidden", true);
+    // this.view.setAttribute("aria-labelledby", "card-title")
+    // this.view.setAttribute("aria-describedby", "card-description");
+    // this.view.setAttribute("role", "dialog");
+
+    util.setAttributes(this.view, {
+        "class": "cardView",
+        "aria-hidden": "true",
+        "aria-labelledby": "card-title",
+        "aria-describedby": "card-description",
+        "role":"dialog"
+    });
+
     this.div = document.createElement("div");
+
     this.div.width = 200;
     this.div.height = 200;
 
@@ -29,16 +43,15 @@ Cardview = function() {
         this.closeButton.src = REMOTE_PATH + "img/closeButtonPetit.png";
     }
 
-    this.detailContainer = document.createElement("div");
-    this.detailContainer.className = "detailHeader";
-    this.detailDescriptionContainer = document.createElement("div");
-    this.detailDescriptionContainer.className = "detailDescription";
-    this.detailNameContainer = document.createElement("div");
-    this.detailNameContainer.className = "detailName";
+    this.cardHeader = document.createElement("h1");
+    this.cardHeader.className = "card-title";
+    this.cardParagraph = document.createElement("p");
+    this.cardParagraph.className = "card-description";
+    this.cardFooter = document.createElement("footer");
 
-    this.view.appendChild(this.detailContainer);
-    this.view.appendChild(this.detailDescriptionContainer);
-    this.view.appendChild(this.detailNameContainer);
+    this.view.appendChild(this.cardHeader);
+    this.view.appendChild(this.cardParagraph);
+    this.view.appendChild(this.cardFooter);
 
     this.view.appendChild(this.closeButton);
 
@@ -89,11 +102,11 @@ Cardview.prototype.closePressed = function(event) {
 Cardview.prototype.show = function(card) {
     this.isOpen = true;
 
-    this.detailContainer.innerHTML = card.copy;
-    this.detailDescriptionContainer.innerHTML = card.story;
-    this.detailNameContainer.innerHTML = "<b><a href='http://" + card.url + "' target='_blank'>" + card.url + "</a></b>";
-    this.detailContainer.style.color = this.detailDescriptionContainer.style.color = card.textColor1 || "#FFFFFF";
-    this.detailNameContainer.style.color = card.textColor2 || "#FFFFFF";
+    this.cardHeader.innerHTML = card.copy;
+    this.cardParagraph.innerHTML = card.story;
+    this.cardFooter.innerHTML = "<a href='http://" + card.url + "' target='_blank'>" + card.url + "</a>";
+    this.cardHeader.style.color = this.cardParagraph.style.color = card.textColor1 || "#FFFFFF";
+    this.cardFooter.style.color = card.textColor2 || "#FFFFFF";
 
     this.hasLoaded = false;
 

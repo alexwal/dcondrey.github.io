@@ -299,7 +299,7 @@ window.requestAnimFrame = function() {
 
 var util = {
     DOM: {
-
+        "document": $(document)
     },
 
     preventDefault : function(evt) {
@@ -340,6 +340,13 @@ var util = {
         var g = bigint >> 8 & 255;
         var b = bigint & 255;
         return [r, g, b];
+    },
+
+    setAttributes: function(el, attrs) {
+        console.log('setAttributes', el);
+        for(var key in attrs) {
+            el.setAttribute(key, attrs[key]);
+        }
     },
 
     openURL: function(url, name, features) {
