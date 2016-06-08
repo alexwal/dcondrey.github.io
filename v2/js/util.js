@@ -2,8 +2,7 @@ var model = {
     content: [
           {
             "id": "petrol",
-            "rfid": "petrol",
-            "gridImage": ["img/petrol.png"],
+            "gridImage": "img/petrol.png",
             "copy": "Petrol Advertising",
             "story": "",
             "color": "#ff5400",
@@ -14,8 +13,7 @@ var model = {
             "url": "petrolad.com/"
         }, {
             "id": "icrossing",
-            "rfid": "icrossing",
-            "gridImage": ["img/icrossing.png"],
+            "gridImage": "img/icrossing.png",
             "copy": "iCrossing",
             "story": "",
             "color": "#f2f2f2",
@@ -26,8 +24,7 @@ var model = {
             "url": "icrossing.com/"
         }, {
             "id": "teamone",
-            "rfid": "teamone",
-            "gridImage": ["img/teamone.png"],
+            "gridImage": "img/teamone.png",
             "copy": "Team One Advertising",
             "story": "",
             "color": "##FFDC21",
@@ -38,8 +35,7 @@ var model = {
             "url": "http://teamoneusa.com/"
         }, {
             "id": "avatarlabs",
-            "rfid": "avatarlabs",
-            "gridImage": ["img/avatarlabs.png"],
+            "gridImage": "img/avatarlabs.png",
             "copy": "AvatarLabs",
             "story": "",
             "color": "#fa9829",
@@ -50,8 +46,7 @@ var model = {
             "url": "avatarlabs.com/"
         }, {
             "id": "beachcoders",
-            "rfid": "beachcoders",
-            "gridImage": ["img/beachcoders.png"],
+            "gridImage": "img/beachcoders.png",
             "copy": "Beach Coders Academy",
             "story": "",
             "color": "#ddddd6",
@@ -62,8 +57,7 @@ var model = {
             "url": "beachcoders.com/"
         }, {
             "id": "nclusive",
-            "rfid": "nclusive",
-            "gridImage": ["img/nclusive.png"],
+            "gridImage": "img/nclusive.png",
             "copy": "Nclusive",
             "story": "",
             "color": "#222222",
@@ -74,8 +68,7 @@ var model = {
             "url": "nclusive.com/"
         }, {
             "id": "thebouqs",
-            "rfid": "thebouqs",
-            "gridImage": ["img/thebouqs.png"],
+            "gridImage": "img/thebouqs.png",
             "copy": "The Bouqs Co.",
             "story": "",
             "color": "#666666",
@@ -86,8 +79,7 @@ var model = {
             "url": "thebouqs.com/"
         }, {
             "id": "radiantimages",
-            "rfid": "radiantimages",
-            "gridImage": ["img/radiantimages.png"],
+            "gridImage": "img/radiantimages.png",
             "copy": "Radiant Images",
             "story": "",
             "color": "#222222",
@@ -98,8 +90,7 @@ var model = {
             "url": "radiantimages.com/"
         }, {
             "id": "usmc",
-            "rfid": "usmc",
-            "gridImage": ["img/usmc.png"],
+            "gridImage": "img/usmc.png",
             "copy": "US Marine Corps",
             "story": "",
             "color": "#fff",
@@ -110,8 +101,7 @@ var model = {
             "url": "usmc.gov/"
         }, {
             "id": "ea",
-            "rfid": "ea",
-            "gridImage": ["img/ea.png"],
+            "gridImage": "img/ea.png",
             "copy": "EA Play",
             "story": "",
             "color": "#4e8ef7",
@@ -122,8 +112,7 @@ var model = {
             "url": "eaplay.com/"
         }, {
             "id": "toyota",
-            "rfid": "toyota",
-            "gridImage": ["img/toyota.png"],
+            "gridImage": "img/toyota.png",
             "copy": "Toyota",
             "story": "",
             "color": "#d7181f",
@@ -134,8 +123,7 @@ var model = {
             "url": "toyota.com/"
         }, {
             "id": "rickiandtheflash",
-            "rfid": "rickiandtheflash",
-            "gridImage": ["img/rickiandtheflash.png"],
+            "gridImage": "img/rickiandtheflash.png",
             "copy": "Ricki & the Flash",
             "story": "",
             "color": "#e6e6e6",
@@ -146,8 +134,7 @@ var model = {
             "url": "http//"
         }, {
             "id": "lexus",
-            "rfid": "lexus",
-            "gridImage": ["img/lexus.png"],
+            "gridImage": "img/lexus.png",
             "copy": "Lexus",
             "story": "",
             "color": "#c1c1c1",
@@ -158,8 +145,7 @@ var model = {
             "url": "lexus.com/cpo"
         }, {
             "id": "html",
-            "rfid": "html",
-            "gridImage": ["img/html.png"],
+            "gridImage": "img/html.png",
             "copy": "HTML4.01 / HTML5",
             "color": "#8bc34a",
             "textColor1": "#fff",
@@ -169,8 +155,7 @@ var model = {
             "url": "w3.com/"
         }, {
             "id": "javascript",
-            "rfid": "javascript",
-            "gridImage": ["img/javascript.png"],
+            "gridImage": "img/javascript.png",
             "copy": "JavaScript",
             "color": "#f0db4f",
             "textColor1": "#323330",
@@ -180,8 +165,7 @@ var model = {
             "url": "ecmascript.com/"
         }, {
             "id": "sass",
-            "rfid": "sass",
-            "gridImage": ["img/sass.png"],
+            "gridImage": "img/sass.png",
             "copy": "SCSS",
             "color": "#ff6e56",
             "textColor1": "#fff",
@@ -191,8 +175,7 @@ var model = {
             "url": "http//sass.com/"
         }, {
             "id": "backbone",
-            "rfid": "Backbone",
-            "gridImage": ["img/backbone.png"],
+            "gridImage": "img/backbone.png",
             "copy": "Backbone",
             "story": "Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.",
             "color": "#f7f7f7",
@@ -203,8 +186,7 @@ var model = {
             "url": "http//backbonejs.org/"
         }, {
             "id": "require",
-            "rfid": "require",
-            "gridImage": ["img/require.png"],
+            "gridImage": "img/require.png",
             "copy": "Require.JS",
             "color": "#f7f7f7",
             "textColor1": "#333",
@@ -214,8 +196,7 @@ var model = {
             "url": "http//requirejs.org/"
         }, {
             "id": "bootstrap",
-            "rfid": "bootstrap",
-            "gridImage": ["img/bootstrap.png"],
+            "gridImage": "img/bootstrap.png",
             "copy": "Bootstrap",
             "story": "HTML, CSS, and JS framework for developing responsive, mobile first projects on the web",
             "color": "#5c4383",

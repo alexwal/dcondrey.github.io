@@ -3,7 +3,7 @@
           {
             "id": "petrol",
             "rfid": "petrol",
-            "gridImage": ["img/petrol.png"],
+            "gridImage": "img/petrol.png",
             "copy": "Petrol Advertising",
             "story": "",
             "color": "#ff5400",
@@ -15,7 +15,7 @@
         }, {
             "id": "icrossing",
             "rfid": "icrossing",
-            "gridImage": ["img/icrossing.png"],
+            "gridImage": "img/icrossing.png",
             "copy": "iCrossing",
             "story": "",
             "color": "#f2f2f2",
@@ -27,7 +27,7 @@
         }, {
             "id": "teamone",
             "rfid": "teamone",
-            "gridImage": ["img/teamone.png"],
+            "gridImage": "img/teamone.png",
             "copy": "Team One Advertising",
             "story": "",
             "color": "##FFDC21",
@@ -39,7 +39,7 @@
         }, {
             "id": "avatarlabs",
             "rfid": "avatarlabs",
-            "gridImage": ["img/avatarlabs.png"],
+            "gridImage": "img/avatarlabs.png",
             "copy": "AvatarLabs",
             "story": "",
             "color": "#fa9829",
@@ -51,7 +51,7 @@
         }, {
             "id": "beachcoders",
             "rfid": "beachcoders",
-            "gridImage": ["img/beachcoders.png"],
+            "gridImage": "img/beachcoders.png",
             "copy": "Beach Coders Academy",
             "story": "",
             "color": "#ddddd6",
@@ -63,7 +63,7 @@
         }, {
             "id": "nclusive",
             "rfid": "nclusive",
-            "gridImage": ["img/nclusive.png"],
+            "gridImage": "img/nclusive.png",
             "copy": "Nclusive",
             "story": "",
             "color": "#222222",
@@ -75,7 +75,7 @@
         }, {
             "id": "thebouqs",
             "rfid": "thebouqs",
-            "gridImage": ["img/thebouqs.png"],
+            "gridImage": "img/thebouqs.png",
             "copy": "The Bouqs Co.",
             "story": "",
             "color": "#666666",
@@ -87,7 +87,7 @@
         }, {
             "id": "radiantimages",
             "rfid": "radiantimages",
-            "gridImage": ["img/radiantimages.png"],
+            "gridImage": "img/radiantimages.png",
             "copy": "Radiant Images",
             "story": "",
             "color": "#222222",
@@ -99,7 +99,7 @@
         }, {
             "id": "usmc",
             "rfid": "usmc",
-            "gridImage": ["img/usmc.png"],
+            "gridImage": "img/usmc.png",
             "copy": "US Marine Corps",
             "story": "",
             "color": "#fff",
@@ -111,7 +111,7 @@
         }, {
             "id": "ea",
             "rfid": "ea",
-            "gridImage": ["img/ea.png"],
+            "gridImage": "img/ea.png",
             "copy": "EA Play",
             "story": "",
             "color": "#4e8ef7",
@@ -123,7 +123,7 @@
         }, {
             "id": "toyota",
             "rfid": "toyota",
-            "gridImage": ["img/toyota.png"],
+            "gridImage": "img/toyota.png",
             "copy": "Toyota",
             "story": "",
             "color": "#d7181f",
@@ -135,7 +135,7 @@
         }, {
             "id": "rickiandtheflash",
             "rfid": "rickiandtheflash",
-            "gridImage": ["img/rickiandtheflash.png"],
+            "gridImage": "img/rickiandtheflash.png",
             "copy": "Ricki & the Flash",
             "story": "",
             "color": "#e6e6e6",
@@ -147,7 +147,7 @@
         }, {
             "id": "lexus",
             "rfid": "lexus",
-            "gridImage": ["img/lexus.png"],
+            "gridImage": "img/lexus.png",
             "copy": "Lexus",
             "story": "",
             "color": "#c1c1c1",
@@ -159,7 +159,7 @@
         }, {
             "id": "html",
             "rfid": "html",
-            "gridImage": ["img/html.png"],
+            "gridImage": "img/html.png",
             "copy": "HTML4.01 / HTML5",
             "story": "",
             "color": "#8bc34a",
@@ -171,7 +171,7 @@
         }, {
             "id": "javascript",
             "rfid": "javascript",
-            "gridImage": ["img/javascript.png"],
+            "gridImage": "img/javascript.png",
             "copy": "JavaScript",
             "story": "",
             "color": "#303030",
@@ -183,7 +183,7 @@
         }, {
             "id": "sass",
             "rfid": "sass",
-            "gridImage": ["img/sass.png"],
+            "gridImage": "img/sass.png",
             "copy": "SCSS",
             "story": "",
             "color": "#ff6e56",
@@ -195,7 +195,7 @@
         }, {
             "id": "backbone",
             "rfid": "Backbone",
-            "gridImage": ["img/backbone.png"],
+            "gridImage": "img/backbone.png",
             "copy": "Backbone",
             "story": "Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.",
             "color": "#f7f7f7",
@@ -207,7 +207,7 @@
         }, {
             "id": "bootstrap",
             "rfid": "bootstrap",
-            "gridImage": ["img/bootstrap.png"],
+            "gridImage": "img/bootstrap.png",
             "copy": "Bootstrap",
             "story": "HTML, CSS, and JS framework for developing responsive, mobile first projects on the web",
             "color": "#5c4383",

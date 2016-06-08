@@ -151,7 +151,7 @@ Grid.prototype.render = function(context) {
                 cardobject.isStart = true;
             }
 
-            cardobject.image.src = REMOTE_PATH + cardobject.card.gridImage[0];
+            cardobject.image.src = REMOTE_PATH + cardobject.card.gridImage;
         }
 
         cardobject.xid = xid;

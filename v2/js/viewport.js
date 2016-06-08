@@ -79,7 +79,6 @@ Viewport.prototype.render = function(context) {
         if (sizeY < 0) {
             sizeY *= -1;
         }
-
         var av1 = averageWidth2 / averageWidth;
         var av1_ = averageWidth / averageWidth2;
         av1 = av1 > av1_ ? av1 : av1_;
@@ -91,7 +90,6 @@ Viewport.prototype.render = function(context) {
     }
     context.restore();
 };
-
 Viewport.prototype.resize = function(width, height) {
     var self = this;
 
@@ -182,9 +180,9 @@ Viewport.prototype.onSquareComplete = function() {
     console.log('onsquarecomplete');
 
     if (util.isIpad) {
-        setTimeout(cardview.show(this), 400);
+        setTimeout(onSquareReady.bind(this), 400);
     } else {
-        cardview.show(this);
+        onSquareReady();
     }
 };
 

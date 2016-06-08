@@ -5,6 +5,7 @@ $(window).ready(onReady);
 function onReady() {
     IS_IE8 = false; // !Modernizr.canvas
     $("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">');
+    //siteTime = new Time;
     last = 0;
     loaded = false;
     resizeCount = 0;
@@ -112,7 +113,7 @@ function onGridStartComplete() {
 
     if (id) {
         for (var i = 0; i < model.content.length; i++) {
-            if (id == model.content[i].rfid) {
+            if (id == model.content[i].id) {
                 card = model.content[i];
                 break;
             }
@@ -151,6 +152,8 @@ function update() {
         this.cacheH = h;
     }
 
+    //siteTime.update();
+
     if (loaded && browseMode) {
         trackpad.update();
     }
@@ -186,7 +189,7 @@ function showCard(card) {
     grid.centerOnCard();
 
     if (card.id != "startx") {
-        window.location.hash = "card=" + card.rfid;
+        window.location.hash = "card=" + card.id;
     } else {
         window.location.hash = "";
     }
@@ -208,6 +211,12 @@ function onViewportShown() {
     }
 }
 
+function onSquareReady() {
+    console.log('onsquareready');
+
+    cardview.show(card);
+}
+
 function onViewportHidden() {
     trackpad.unlock();
     grid.unlock();
@@ -223,6 +232,13 @@ function onCardSelected(card) {
     } else {
         showCard(card);
     }
+}
+
+function onSubmitComplete() {
+    // submitForm.hide();
+    trackpad.unlock();
+    grid.unlock();
+    browseMode = true;
 }
 
 function onResize() {
