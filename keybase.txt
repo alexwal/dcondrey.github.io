@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/dcondrey
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.condrey.io
+  * I am dcondrey (https://keybase.io/dcondrey) on keybase.
+  * I have a public key ASCGoiS4zLlUAXyoofsFzFfudXvYYkCiTAfNY4j3hAisBwo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012086a224b8ccb954017ca8a1fb05cc57ee757bd86240a24c07cd6388f78408ac070a",
+            "host": "keybase.io",
+            "kid": "012086a224b8ccb954017ca8a1fb05cc57ee757bd86240a24c07cd6388f78408ac070a",
+            "uid": "54d35d1165351e09220fb58ac2ec1600",
+            "username": "dcondrey"
+        },
+        "service": {
+            "hostname": "www.condrey.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1466059928,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1466059907,
+        "hash": "66aceabdfd87b5cb861995f41d548fffc1c4cdba7e6d70db7db29ebd0acf54dae7b079b6621b146b8b34ef582eff757f21123961313619430544ee7619701068",
+        "seqno": 489706
+    },
+    "prev": "1c4402bb1b1474ea1ae58e68685a81dd50140fc946aae3085b84a61fdd1e6e07",
+    "seqno": 15,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghqIkuMy5VAF8qKH7BcxX7nV72GJAokwHzWOI94QIrAcKp3BheWxvYWTFAvZ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwODZhMjI0YjhjY2I5NTQwMTdjYThhMWZiMDVjYzU3ZWU3NTdiZDg2MjQwYTI0YzA3Y2Q2Mzg4Zjc4NDA4YWMwNzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwODZhMjI0YjhjY2I5NTQwMTdjYThhMWZiMDVjYzU3ZWU3NTdiZDg2MjQwYTI0YzA3Y2Q2Mzg4Zjc4NDA4YWMwNzBhIiwidWlkIjoiNTRkMzVkMTE2NTM1MWUwOTIyMGZiNThhYzJlYzE2MDAiLCJ1c2VybmFtZSI6ImRjb25kcmV5In0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJ3d3cuY29uZHJleS5pbyIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMTYifSwiY3RpbWUiOjE0NjYwNTk5MjgsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ2NjA1OTkwNywiaGFzaCI6IjY2YWNlYWJkZmQ4N2I1Y2I4NjE5OTVmNDFkNTQ4ZmZmYzFjNGNkYmE3ZTZkNzBkYjdkYjI5ZWJkMGFjZjU0ZGFlN2IwNzliNjYyMWIxNDZiOGIzNGVmNTgyZWZmNzU3ZjIxMTIzOTYxMzEzNjE5NDMwNTQ0ZWU3NjE5NzAxMDY4Iiwic2Vxbm8iOjQ4OTcwNn0sInByZXYiOiIxYzQ0MDJiYjFiMTQ3NGVhMWFlNThlNjg2ODVhODFkZDUwMTQwZmM5NDZhYWUzMDg1Yjg0YTYxZmRkMWU2ZTA3Iiwic2Vxbm8iOjE1LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQL3Bqqi3LVj7XeGo1HvZbqP7ZO9QT/JNcxxOgPEna2/bGt2AFdBhwA+SOyN1+AEmilAkXj1LXHdkBVXRfbDStgCoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dcondrey
+
+==================================================================
